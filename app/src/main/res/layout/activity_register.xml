@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_1"
+    tools:context="com.example.uiwidgettest.Register">
+
+    <include layout="@layout/titleregister"/>
+
+    <ImageView
+        android:layout_width="3000dp"
+        android:layout_height="400dp"
+        android:src="@drawable/bg_register_bottom"
+        android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:id="@+id/registersucceed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sex"
+        android:text="注册"
+        android:layout_centerHorizontal="true"/>
+    <EditText
+        android:id="@+id/registername"
+        android:layout_width="300dp"
+        android:layout_height="42dp"
+        android:layout_above="@+id/registerphone"
+        android:layout_alignLeft="@+id/registerphone"
+        android:hint="请输入昵称" />
+    <EditText
+        android:id="@+id/registerphone"
+        android:layout_width="300dp"
+        android:layout_height="42dp"
+        android:layout_centerInParent="true"
+        android:hint="请输入手机号"/>
+    <EditText
+        android:id="@+id/secret"
+        android:layout_width="300dp"
+        android:layout_height="42dp"
+        android:layout_below="@id/registerphone"
+        android:layout_alignLeft="@+id/registerphone"
+        android:hint="请输入密码"/>
+    <ImageView
+        android:id="@+id/account"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_toLeftOf="@id/registername"
+        android:layout_alignTop="@+id/registername"
+        android:src="@drawable/ic_login_account"/>
+    <ImageView
+        android:id="@+id/phone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/registerphone"
+        android:layout_toLeftOf="@+id/registerphone"
+        android:src="@drawable/ic_register_phone"/>
+    <ImageView
+        android:id="@+id/password"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/secret"
+        android:layout_toLeftOf="@+id/secret"
+        android:src="@drawable/ic_login_password"/>
+    <ImageView
+        android:id="@+id/sexpicture"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/sex"
+        android:layout_toLeftOf="@id/secret"
+        android:src="@drawable/ic_register_gender"/>
+
+    <Spinner
+        android:id="@+id/sex"
+        android:layout_width="300dp"
+        android:layout_height="42dp"
+        android:layout_below="@+id/secret"
+        android:layout_alignLeft="@+id/secret"
+        android:entries="@array/sex"
+        ></Spinner>
+
+
+</RelativeLayout>

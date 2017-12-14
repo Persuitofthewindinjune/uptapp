@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_1">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.uiwidgettest.UIWidgetTest">
+
+    <include layout="@layout/title"/>
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="124dp"
+        android:layout_height="147dp"
+        android:layout_above="@id/name"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="240dp"
+        android:layout_height="42dp"
+        android:layout_above="@id/secret"
+        android:layout_alignLeft="@id/secret"
+        android:hint="请输入用户名"/>
+
+    <ImageView
+        android:id="@+id/imageaccount"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_toLeftOf="@id/name"
+        android:layout_alignTop="@id/name"
+        android:src="@drawable/ic_login_account"/>
+
+    <ImageView
+        android:id="@+id/imageLock"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/secret"
+        android:src="@drawable/ic_login_password"
+        />
+
+    <EditText
+        android:id="@+id/secret"
+        android:layout_width="240dp"
+        android:layout_height="42dp"
+        android:layout_centerInParent="true"
+        android:hint="请输入密码"/>
+    <Button
+        android:id="@+id/click"
+        android:layout_width="264dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/secret"
+        android:layout_centerHorizontal="true"
+        android:text="登   录"/>
+    <Button
+        android:id="@+id/noregister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/click"
+        android:layout_centerHorizontal="true"
+        android:text="还没有账户？注册"
+        android:shadowColor="#FFB6"/>
+
+    <android.support.v7.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="310dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        app:cardElevation="10000000dp"
+        >
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
